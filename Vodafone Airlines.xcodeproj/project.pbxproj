@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7C75F5B2707E7A5001DF94E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */; };
+		C7C75F5F2707E7A5001DF94E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F5E2707E7A5001DF94E /* ViewController.swift */; };
+		C7C75F622707E7A5001DF94E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F602707E7A5001DF94E /* Main.storyboard */; };
+		C7C75F642707E7A8001DF94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F632707E7A8001DF94E /* Assets.xcassets */; };
+		C7C75F672707E7A8001DF94E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F652707E7A8001DF94E /* LaunchScreen.storyboard */; };
+		C7C75F722707E7A8001DF94E /* Vodafone_AirlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F712707E7A8001DF94E /* Vodafone_AirlinesTests.swift */; };
+		C7C75F7D2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F7C2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7C75F6E2707E7A8001DF94E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7C75F4F2707E7A5001DF94E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7C75F562707E7A5001DF94E;
+			remoteInfo = "Vodafone Airlines";
+		};
+		C7C75F792707E7A8001DF94E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7C75F4F2707E7A5001DF94E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7C75F562707E7A5001DF94E;
+			remoteInfo = "Vodafone Airlines";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C7C75F572707E7A5001DF94E /* Vodafone Airlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vodafone Airlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7C75F5E2707E7A5001DF94E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7C75F612707E7A5001DF94E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7C75F632707E7A8001DF94E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7C75F662707E7A8001DF94E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7C75F682707E7A8001DF94E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7C75F6D2707E7A8001DF94E /* Vodafone AirlinesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vodafone AirlinesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C75F712707E7A8001DF94E /* Vodafone_AirlinesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vodafone_AirlinesTests.swift; sourceTree = "<group>"; };
+		C7C75F732707E7A8001DF94E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7C75F782707E7A8001DF94E /* Vodafone AirlinesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vodafone AirlinesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C75F7C2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vodafone_AirlinesUITests.swift; sourceTree = "<group>"; };
+		C7C75F7E2707E7A8001DF94E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7C75F542707E7A5001DF94E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C75F6A2707E7A8001DF94E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C75F752707E7A8001DF94E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7C75F4E2707E7A5001DF94E = {
+			isa = PBXGroup;
+			children = (
+				C7C75F592707E7A5001DF94E /* Vodafone Airlines */,
+				C7C75F702707E7A8001DF94E /* Vodafone AirlinesTests */,
+				C7C75F7B2707E7A8001DF94E /* Vodafone AirlinesUITests */,
+				C7C75F582707E7A5001DF94E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7C75F582707E7A5001DF94E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75F572707E7A5001DF94E /* Vodafone Airlines.app */,
+				C7C75F6D2707E7A8001DF94E /* Vodafone AirlinesTests.xctest */,
+				C7C75F782707E7A8001DF94E /* Vodafone AirlinesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7C75F592707E7A5001DF94E /* Vodafone Airlines */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */,
+				C7C75F5E2707E7A5001DF94E /* ViewController.swift */,
+				C7C75F602707E7A5001DF94E /* Main.storyboard */,
+				C7C75F632707E7A8001DF94E /* Assets.xcassets */,
+				C7C75F652707E7A8001DF94E /* LaunchScreen.storyboard */,
+				C7C75F682707E7A8001DF94E /* Info.plist */,
+			);
+			path = "Vodafone Airlines";
+			sourceTree = "<group>";
+		};
+		C7C75F702707E7A8001DF94E /* Vodafone AirlinesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75F712707E7A8001DF94E /* Vodafone_AirlinesTests.swift */,
+				C7C75F732707E7A8001DF94E /* Info.plist */,
+			);
+			path = "Vodafone AirlinesTests";
+			sourceTree = "<group>";
+		};
+		C7C75F7B2707E7A8001DF94E /* Vodafone AirlinesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75F7C2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift */,
+				C7C75F7E2707E7A8001DF94E /* Info.plist */,
+			);
+			path = "Vodafone AirlinesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7C75F562707E7A5001DF94E /* Vodafone Airlines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7C75F812707E7A8001DF94E /* Build configuration list for PBXNativeTarget "Vodafone Airlines" */;
+			buildPhases = (
+				C7C75F532707E7A5001DF94E /* Sources */,
+				C7C75F542707E7A5001DF94E /* Frameworks */,
+				C7C75F552707E7A5001DF94E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vodafone Airlines";
+			productName = "Vodafone Airlines";
+			productReference = C7C75F572707E7A5001DF94E /* Vodafone Airlines.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7C75F6C2707E7A8001DF94E /* Vodafone AirlinesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7C75F842707E7A8001DF94E /* Build configuration list for PBXNativeTarget "Vodafone AirlinesTests" */;
+			buildPhases = (
+				C7C75F692707E7A8001DF94E /* Sources */,
+				C7C75F6A2707E7A8001DF94E /* Frameworks */,
+				C7C75F6B2707E7A8001DF94E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7C75F6F2707E7A8001DF94E /* PBXTargetDependency */,
+			);
+			name = "Vodafone AirlinesTests";
+			productName = "Vodafone AirlinesTests";
+			productReference = C7C75F6D2707E7A8001DF94E /* Vodafone AirlinesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7C75F772707E7A8001DF94E /* Vodafone AirlinesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7C75F872707E7A8001DF94E /* Build configuration list for PBXNativeTarget "Vodafone AirlinesUITests" */;
+			buildPhases = (
+				C7C75F742707E7A8001DF94E /* Sources */,
+				C7C75F752707E7A8001DF94E /* Frameworks */,
+				C7C75F762707E7A8001DF94E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7C75F7A2707E7A8001DF94E /* PBXTargetDependency */,
+			);
+			name = "Vodafone AirlinesUITests";
+			productName = "Vodafone AirlinesUITests";
+			productReference = C7C75F782707E7A8001DF94E /* Vodafone AirlinesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7C75F4F2707E7A5001DF94E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C7C75F562707E7A5001DF94E = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					C7C75F6C2707E7A8001DF94E = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = C7C75F562707E7A5001DF94E;
+					};
+					C7C75F772707E7A8001DF94E = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = C7C75F562707E7A5001DF94E;
+					};
+				};
+			};
+			buildConfigurationList = C7C75F522707E7A5001DF94E /* Build configuration list for PBXProject "Vodafone Airlines" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7C75F4E2707E7A5001DF94E;
+			productRefGroup = C7C75F582707E7A5001DF94E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7C75F562707E7A5001DF94E /* Vodafone Airlines */,
+				C7C75F6C2707E7A8001DF94E /* Vodafone AirlinesTests */,
+				C7C75F772707E7A8001DF94E /* Vodafone AirlinesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7C75F552707E7A5001DF94E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C75F672707E7A8001DF94E /* LaunchScreen.storyboard in Resources */,
+				C7C75F642707E7A8001DF94E /* Assets.xcassets in Resources */,
+				C7C75F622707E7A5001DF94E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C75F6B2707E7A8001DF94E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C75F762707E7A8001DF94E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7C75F532707E7A5001DF94E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C75F5F2707E7A5001DF94E /* ViewController.swift in Sources */,
+				C7C75F5B2707E7A5001DF94E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C75F692707E7A8001DF94E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C75F722707E7A8001DF94E /* Vodafone_AirlinesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C75F742707E7A8001DF94E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C75F7D2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7C75F6F2707E7A8001DF94E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7C75F562707E7A5001DF94E /* Vodafone Airlines */;
+			targetProxy = C7C75F6E2707E7A8001DF94E /* PBXContainerItemProxy */;
+		};
+		C7C75F7A2707E7A8001DF94E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7C75F562707E7A5001DF94E /* Vodafone Airlines */;
+			targetProxy = C7C75F792707E7A8001DF94E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7C75F602707E7A5001DF94E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7C75F612707E7A5001DF94E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7C75F652707E7A8001DF94E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7C75F662707E7A8001DF94E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7C75F7F2707E7A8001DF94E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7C75F802707E7A8001DF94E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7C75F822707E7A8001DF94E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB2JX4B96G;
+				INFOPLIST_FILE = "Vodafone Airlines/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-Airlines";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7C75F832707E7A8001DF94E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB2JX4B96G;
+				INFOPLIST_FILE = "Vodafone Airlines/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-Airlines";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C7C75F852707E7A8001DF94E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB2JX4B96G;
+				INFOPLIST_FILE = "Vodafone AirlinesTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-AirlinesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vodafone Airlines.app/Vodafone Airlines";
+			};
+			name = Debug;
+		};
+		C7C75F862707E7A8001DF94E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB2JX4B96G;
+				INFOPLIST_FILE = "Vodafone AirlinesTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-AirlinesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vodafone Airlines.app/Vodafone Airlines";
+			};
+			name = Release;
+		};
+		C7C75F882707E7A8001DF94E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB2JX4B96G;
+				INFOPLIST_FILE = "Vodafone AirlinesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-AirlinesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vodafone Airlines";
+			};
+			name = Debug;
+		};
+		C7C75F892707E7A8001DF94E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB2JX4B96G;
+				INFOPLIST_FILE = "Vodafone AirlinesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-AirlinesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vodafone Airlines";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7C75F522707E7A5001DF94E /* Build configuration list for PBXProject "Vodafone Airlines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C75F7F2707E7A8001DF94E /* Debug */,
+				C7C75F802707E7A8001DF94E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7C75F812707E7A8001DF94E /* Build configuration list for PBXNativeTarget "Vodafone Airlines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C75F822707E7A8001DF94E /* Debug */,
+				C7C75F832707E7A8001DF94E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7C75F842707E7A8001DF94E /* Build configuration list for PBXNativeTarget "Vodafone AirlinesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C75F852707E7A8001DF94E /* Debug */,
+				C7C75F862707E7A8001DF94E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7C75F872707E7A8001DF94E /* Build configuration list for PBXNativeTarget "Vodafone AirlinesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C75F882707E7A8001DF94E /* Debug */,
+				C7C75F892707E7A8001DF94E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7C75F4F2707E7A5001DF94E /* Project object */;
+}
