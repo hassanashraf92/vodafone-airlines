@@ -132,7 +132,7 @@ extension AirlinesTableViewController: UITableViewDelegate, UITableViewDataSourc
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath) as? UITableViewCell
-    cell?.textLabel?.text = viewModel?.getAirline(at: indexPath)
+    cell?.textLabel?.text = viewModel?.getAirline(at: indexPath)?.name
     return cell!
   }
   

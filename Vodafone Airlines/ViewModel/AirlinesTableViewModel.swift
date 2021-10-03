@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 protocol AirlinesTableViewModelProtocol {
   var screenTitle: String { get }
@@ -14,8 +16,8 @@ protocol AirlinesTableViewModelProtocol {
   func searchAirline(query: String)
   func fetchData()
   
-  var airlineCellViewModels: Bindable<[String]> { get }
-  func getAirline(at indexPath: IndexPath) -> String
+  var airlineCellViewModels: Bindable<[Airline]> { get }
+  func getAirline(at indexPath: IndexPath) -> Airline?
 }
 
 class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
@@ -23,8 +25,8 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
   var screenTitle: String = "Countries"
   var state: Bindable<State> = Bindable<State>(.empty)
   
-  private var airlines: [String] = [String]()
-  var airlineCellViewModels: Bindable<[String]> = Bindable<[String]>([])
+  private var airlines: [Airline] = [Airline]()
+  var airlineCellViewModels: Bindable<[Airline]> = Bindable<[Airline]>([])
   
   func addNewAirline() {
     print("Add New Airline Pressed")
@@ -35,13 +37,13 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
       return
     }
     let filtered = airlines.filter({ airline in
-      return airline.range(of: query, options: .caseInsensitive, range: nil, locale: nil) != nil
+      return airline.name.range(of: query, options: .caseInsensitive, range: nil, locale: nil) != nil
     })
     airlineCellViewModels.value = filtered
   }
   
-  func getAirline(at indexPath: IndexPath) -> String {
-    return airlineCellViewModels.value?[indexPath.row] ?? ""
+  func getAirline(at indexPath: IndexPath) -> Airline? {
+    return airlineCellViewModels.value?[indexPath.row]
   }
   
   func fetchData() {
@@ -52,18 +54,39 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
       self.airlines = data
       self.airlineCellViewModels.value = data
       self.state.value = .populated
+      
+      
+      CoreDataStorage.shared.clearStorage(forEntity: "Airline")
+      CoreDataStorage.shared.saveContext()
+      
+      let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+      print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+      print(paths[0])
+      
     }
   }
   
-  func generateMockData() -> [String] {
-    var data = [String]()
-    for i in 0...20 {
-      data.append("Airline \(i)")
-    }
+  func generateMockData() -> [Airline] {
+    let path = Bundle.main.path(forResource: "airlines", ofType: "json")!
+    let data = try! Data(contentsOf: URL(fileURLWithPath: path))
     
-    return data
+    
+    let decoder = JSONDecoder()
+    let managedObjectContext = CoreDataStorage.shared.managedObjectContext()
+    guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
+      fatalError("Failed to retrieve managed object context Key")
+    }
+    decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
+    
+    do {
+      let result = try decoder.decode(AirlineResponse.self, from: data)
+      print(result.airlines)
+      return result.airlines
+    } catch let error {
+      print("decoding error: \(error)")
+      return []
+    }
+
     
   }
-  
-  
 }
