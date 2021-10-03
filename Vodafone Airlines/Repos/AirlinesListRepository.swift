@@ -22,8 +22,8 @@ class AirlinesListRepository {
     self.dbContainer = CoreDataStorage.shared
   }
   
-  private func saveToCoreData() {
-    CoreDataStorage.shared.clearStorage(forEntity: "Airline")
+  private func saveToCoreData(for entityName: String) {
+    CoreDataStorage.shared.clearStorage(forEntity: entityName)
     CoreDataStorage.shared.saveContext()
     
     let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
@@ -50,7 +50,7 @@ extension AirlinesListRepository: AirlinesListRepositoryProtocol {
       switch success {
       case true:
         DispatchQueue.main.async {
-          self?.saveToCoreData()
+          self?.saveToCoreData(for: "Airline")
         }
         complete(true, airlines, nil)
       case false:
