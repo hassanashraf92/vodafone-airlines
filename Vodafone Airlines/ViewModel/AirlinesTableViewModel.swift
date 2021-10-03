@@ -12,21 +12,29 @@ import CoreData
 protocol AirlinesTableViewModelProtocol {
   var screenTitle: String { get }
   var state: Bindable<State> { get }
+  var airlineCellViewModels: Bindable<[Airline]> { get }
+  
   func addNewAirline()
   func searchAirline(query: String)
-  func fetchData()
-  
-  var airlineCellViewModels: Bindable<[Airline]> { get }
+  func fetchAirlinesData()
   func getAirline(at indexPath: IndexPath) -> Airline?
 }
 
 class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
+
   
   var screenTitle: String = "Countries"
   var state: Bindable<State> = Bindable<State>(.empty)
   
-  private var airlines: [Airline] = [Airline]()
+  private var airlines: [Airline] = [Airline]() //For Caching Purpose..
   var airlineCellViewModels: Bindable<[Airline]> = Bindable<[Airline]>([])
+  
+
+  private var dataRepo: AirlinesListRepositoryProtocol
+  
+  init(repo: AirlinesListRepositoryProtocol = AirlinesListRepository()) {
+    self.dataRepo = repo
+      }
   
   func addNewAirline() {
     print("Add New Airline Pressed")
@@ -34,6 +42,7 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
   
   func searchAirline(query: String) {
     guard !query.isEmpty else {
+      airlineCellViewModels.value = airlines
       return
     }
     let filtered = airlines.filter({ airline in
@@ -46,47 +55,30 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
     return airlineCellViewModels.value?[indexPath.row]
   }
   
-  func fetchData() {
-    self.state.value = .loading
-    let data = generateMockData()
-    DispatchQueue.global().async {
-      sleep(3)
-      self.airlines = data
-      self.airlineCellViewModels.value = data
-      self.state.value = .populated
+  func fetchAirlinesData() {
+    
+    self.switchViewModelStateTo(.loading)
+    
+    self.dataRepo.fetchAirlinesData { [weak self] success, airlines, error in
+      guard let self = self else { return }
+      guard error == nil else {
+        self.switchViewModelStateTo(.error)
+        return
+      }
       
-      
-      CoreDataStorage.shared.clearStorage(forEntity: "Airline")
-      CoreDataStorage.shared.saveContext()
-      
-      let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-      print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-      print(paths[0])
-      
+      self.processAirlinesList(airlines)
+      self.switchViewModelStateTo(.populated)
     }
   }
   
-  func generateMockData() -> [Airline] {
-    let path = Bundle.main.path(forResource: "airlines", ofType: "json")!
-    let data = try! Data(contentsOf: URL(fileURLWithPath: path))
-    
-    
-    let decoder = JSONDecoder()
-    let managedObjectContext = CoreDataStorage.shared.managedObjectContext()
-    guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
-      fatalError("Failed to retrieve managed object context Key")
-    }
-    decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
-    
-    do {
-      let result = try decoder.decode(AirlineResponse.self, from: data)
-      print(result.airlines)
-      return result.airlines
-    } catch let error {
-      print("decoding error: \(error)")
-      return []
-    }
-
-    
+  
+  //MARK: Helper Functions..
+  private func switchViewModelStateTo(_ state: State) {
+    self.state.value = state
+  }
+  
+  private func processAirlinesList(_ airlines: [Airline]) {
+    self.airlines = airlines
+    self.airlineCellViewModels.value = airlines
   }
 }

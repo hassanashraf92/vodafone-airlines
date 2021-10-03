@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Bindable<T> {
+public class Bindable<T> {
   
   typealias Listener = (T?) -> ()
   

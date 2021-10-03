@@ -42,7 +42,7 @@ class CoreDataStorage: NSObject {
   
   // MARK: - Core Data Saving support
   
-  func saveContext () {
+  func saveContext() {
     let context = persistentContainer.viewContext
     if context.hasChanges {
       do {
@@ -84,5 +84,19 @@ class CoreDataStorage: NSObject {
         print(error)
       }
     }
+  }
+  
+  func fetchData(entityName: String) -> [NSManagedObject] {
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+    let context = persistentContainer.viewContext
+    do {
+      let result = try context.fetch(fetchRequest)
+      print("Result of Fetching from CoreData is \(result.debugDescription)")
+      return result
+    } catch {
+      print("Fetch failed..")
+      return []
+    }
+    
   }
 }

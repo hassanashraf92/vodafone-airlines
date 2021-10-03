@@ -109,7 +109,7 @@ class AirlinesTableViewController: UIViewController {
       }
     }
     
-    viewModel.fetchData()
+    viewModel.fetchAirlinesData()
     
   }
   
