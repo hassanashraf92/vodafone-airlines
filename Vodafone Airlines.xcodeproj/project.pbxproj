@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C7C75F5B2707E7A5001DF94E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */; };
-		C7C75F5F2707E7A5001DF94E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F5E2707E7A5001DF94E /* ViewController.swift */; };
-		C7C75F622707E7A5001DF94E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F602707E7A5001DF94E /* Main.storyboard */; };
 		C7C75F642707E7A8001DF94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F632707E7A8001DF94E /* Assets.xcassets */; };
 		C7C75F672707E7A8001DF94E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F652707E7A8001DF94E /* LaunchScreen.storyboard */; };
 		C7C75F722707E7A8001DF94E /* Vodafone_AirlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F712707E7A8001DF94E /* Vodafone_AirlinesTests.swift */; };
 		C7C75F7D2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F7C2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift */; };
+		C7C75F902707EEF3001DF94E /* AirlinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F8F2707EEF3001DF94E /* AirlinesTableViewController.swift */; };
+		C7C75F922707F23D001DF94E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F912707F23D001DF94E /* Main.storyboard */; };
+		C7C75F942707F262001DF94E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F932707F262001DF94E /* HomeViewController.swift */; };
+		C7C75F972707F2F8001DF94E /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F962707F2F8001DF94E /* UIStoryboard+Extension.swift */; };
+		C7C75F992707F488001DF94E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F982707F488001DF94E /* UIViewController+Extension.swift */; };
+		C7C75F9B2707F8E8001DF94E /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F9A2707F8E8001DF94E /* UIColor+Theme.swift */; };
+		C7C75F9D2707FB6D001DF94E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F9C2707FB6D001DF94E /* Colors.xcassets */; };
+		C7C75F9F2707FC9A001DF94E /* CircleShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F9E2707FC9A001DF94E /* CircleShadowView.swift */; };
+		C7C75FA12707FED3001DF94E /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75FA02707FED3001DF94E /* RoundShadowView.swift */; };
+		C7C75FA32707FF4F001DF94E /* AirlinesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75FA22707FF4F001DF94E /* AirlinesTableViewModel.swift */; };
+		C7C75FA627092B6E001DF94E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75FA527092B6E001DF94E /* State.swift */; };
+		C7C75FA827092D7E001DF94E /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75FA727092D7E001DF94E /* Bindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +46,6 @@
 /* Begin PBXFileReference section */
 		C7C75F572707E7A5001DF94E /* Vodafone Airlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vodafone Airlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7C75F5E2707E7A5001DF94E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C7C75F612707E7A5001DF94E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7C75F632707E7A8001DF94E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7C75F662707E7A8001DF94E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7C75F682707E7A8001DF94E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,18 @@
 		C7C75F782707E7A8001DF94E /* Vodafone AirlinesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vodafone AirlinesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C75F7C2707E7A8001DF94E /* Vodafone_AirlinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vodafone_AirlinesUITests.swift; sourceTree = "<group>"; };
 		C7C75F7E2707E7A8001DF94E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7C75F8F2707EEF3001DF94E /* AirlinesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesTableViewController.swift; sourceTree = "<group>"; };
+		C7C75F912707F23D001DF94E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C7C75F932707F262001DF94E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C7C75F962707F2F8001DF94E /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		C7C75F982707F488001DF94E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C7C75F9A2707F8E8001DF94E /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		C7C75F9C2707FB6D001DF94E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C7C75F9E2707FC9A001DF94E /* CircleShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadowView.swift; sourceTree = "<group>"; };
+		C7C75FA02707FED3001DF94E /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
+		C7C75FA22707FF4F001DF94E /* AirlinesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesTableViewModel.swift; sourceTree = "<group>"; };
+		C7C75FA527092B6E001DF94E /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		C7C75FA727092D7E001DF94E /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +118,15 @@
 			isa = PBXGroup;
 			children = (
 				C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */,
-				C7C75F5E2707E7A5001DF94E /* ViewController.swift */,
-				C7C75F602707E7A5001DF94E /* Main.storyboard */,
+				C7C75F932707F262001DF94E /* HomeViewController.swift */,
 				C7C75F632707E7A8001DF94E /* Assets.xcassets */,
+				C7C75F9C2707FB6D001DF94E /* Colors.xcassets */,
 				C7C75F652707E7A8001DF94E /* LaunchScreen.storyboard */,
 				C7C75F682707E7A8001DF94E /* Info.plist */,
+				C7C75F8A2707E863001DF94E /* Model */,
+				C7C75F8B2707E868001DF94E /* View */,
+				C7C75F8C2707E86C001DF94E /* ViewModel */,
+				C7C75F952707F2DB001DF94E /* Extensions */,
 			);
 			path = "Vodafone Airlines";
 			sourceTree = "<group>";
@@ -123,6 +147,52 @@
 				C7C75F7E2707E7A8001DF94E /* Info.plist */,
 			);
 			path = "Vodafone AirlinesUITests";
+			sourceTree = "<group>";
+		};
+		C7C75F8A2707E863001DF94E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7C75F8B2707E868001DF94E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75FA427092B06001DF94E /* Common Views */,
+				C7C75F8F2707EEF3001DF94E /* AirlinesTableViewController.swift */,
+				C7C75F912707F23D001DF94E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7C75F8C2707E86C001DF94E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75FA22707FF4F001DF94E /* AirlinesTableViewModel.swift */,
+				C7C75FA527092B6E001DF94E /* State.swift */,
+				C7C75FA727092D7E001DF94E /* Bindable.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C7C75F952707F2DB001DF94E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75F962707F2F8001DF94E /* UIStoryboard+Extension.swift */,
+				C7C75F982707F488001DF94E /* UIViewController+Extension.swift */,
+				C7C75F9A2707F8E8001DF94E /* UIColor+Theme.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C7C75FA427092B06001DF94E /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7C75F9E2707FC9A001DF94E /* CircleShadowView.swift */,
+				C7C75FA02707FED3001DF94E /* RoundShadowView.swift */,
+			);
+			path = "Common Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C75F672707E7A8001DF94E /* LaunchScreen.storyboard in Resources */,
+				C7C75F9D2707FB6D001DF94E /* Colors.xcassets in Resources */,
 				C7C75F642707E7A8001DF94E /* Assets.xcassets in Resources */,
-				C7C75F622707E7A5001DF94E /* Main.storyboard in Resources */,
+				C7C75F922707F23D001DF94E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7C75F5F2707E7A5001DF94E /* ViewController.swift in Sources */,
+				C7C75F902707EEF3001DF94E /* AirlinesTableViewController.swift in Sources */,
+				C7C75FA12707FED3001DF94E /* RoundShadowView.swift in Sources */,
 				C7C75F5B2707E7A5001DF94E /* AppDelegate.swift in Sources */,
+				C7C75FA627092B6E001DF94E /* State.swift in Sources */,
+				C7C75F972707F2F8001DF94E /* UIStoryboard+Extension.swift in Sources */,
+				C7C75F9B2707F8E8001DF94E /* UIColor+Theme.swift in Sources */,
+				C7C75F992707F488001DF94E /* UIViewController+Extension.swift in Sources */,
+				C7C75FA827092D7E001DF94E /* Bindable.swift in Sources */,
+				C7C75F942707F262001DF94E /* HomeViewController.swift in Sources */,
+				C7C75F9F2707FC9A001DF94E /* CircleShadowView.swift in Sources */,
+				C7C75FA32707FF4F001DF94E /* AirlinesTableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +372,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C7C75F602707E7A5001DF94E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7C75F612707E7A5001DF94E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C7C75F652707E7A8001DF94E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-Airlines";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -461,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hassan.Vodafone-Airlines";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
