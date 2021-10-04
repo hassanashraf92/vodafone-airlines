@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AirlinesTableViewController: UIViewController {
+class AirlinesTableViewController: BaseViewController {
   
   @IBOutlet weak var searchTextField: UITextField! {
     didSet {
@@ -53,17 +53,7 @@ class AirlinesTableViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupNavigationBar()
     fillUI()
-  }
-  
-  fileprivate func setupNavigationBar() {
-    self.navigationController?.navigationBar.shadowImage = UIImage()
-    self.navigationController?.navigationBar.layer.masksToBounds = false
-    self.navigationController?.navigationBar.layer.shadowColor = UIColor.grayShadow.cgColor
-    self.navigationController?.navigationBar.layer.shadowOpacity = 1
-    self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 3.0)
-    self.navigationController?.navigationBar.layer.shadowRadius = 6
   }
   
   fileprivate func fillUI() {

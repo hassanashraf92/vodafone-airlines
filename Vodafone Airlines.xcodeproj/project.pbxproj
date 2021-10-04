@@ -46,6 +46,7 @@
 		C7C7605D270AA763001DF94E /* Vodafone-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C7605A270AA763001DF94E /* Vodafone-Bold.ttf */; };
 		C7C7605F270AA835001DF94E /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7605E270AA835001DF94E /* FontFamily.swift */; };
 		C7C76061270AA8BB001DF94E /* GeneralLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76060270AA8BB001DF94E /* GeneralLabel.swift */; };
+		C7C76063270AAAD4001DF94E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76062270AAAD4001DF94E /* BaseViewController.swift */; };
 		E119C2E21D12D7BC57F56151 /* Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FFE9537E2079F2922E2F37 /* Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		C7C7605A270AA763001DF94E /* Vodafone-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vodafone-Bold.ttf"; sourceTree = "<group>"; };
 		C7C7605E270AA835001DF94E /* FontFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
 		C7C76060270AA8BB001DF94E /* GeneralLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLabel.swift; sourceTree = "<group>"; };
+		C7C76062270AAAD4001DF94E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D940FAEE6664309AAB4D84E2 /* Pods-Vodafone Airlines.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vodafone Airlines.release.xcconfig"; path = "Target Support Files/Pods-Vodafone Airlines/Pods-Vodafone Airlines.release.xcconfig"; sourceTree = "<group>"; };
 		E8D61AD1A6628C951CF88DFB /* Pods-Vodafone AirlinesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vodafone AirlinesTests.release.xcconfig"; path = "Target Support Files/Pods-Vodafone AirlinesTests/Pods-Vodafone AirlinesTests.release.xcconfig"; sourceTree = "<group>"; };
 		F9FFE9537E2079F2922E2F37 /* Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +335,7 @@
 		C7C7604F270A7E2D001DF94E /* Airlines View */ = {
 			isa = PBXGroup;
 			children = (
+				C7C76062270AAAD4001DF94E /* BaseViewController.swift */,
 				C7C7604B270A7E28001DF94E /* AirlineTableViewCell.swift */,
 				C7C7604C270A7E28001DF94E /* AirlineTableViewCell.xib */,
 				C7C75F8F2707EEF3001DF94E /* AirlinesTableViewController.swift */,
@@ -608,6 +611,7 @@
 				C7C75FF22709F454001DF94E /* CoraDataStorage.swift in Sources */,
 				C7C75FA12707FED3001DF94E /* RoundShadowView.swift in Sources */,
 				C7C7603E270A18FF001DF94E /* AirlinesListRepository.swift in Sources */,
+				C7C76063270AAAD4001DF94E /* BaseViewController.swift in Sources */,
 				C7C76061270AA8BB001DF94E /* GeneralLabel.swift in Sources */,
 				C7C75F5B2707E7A5001DF94E /* AppDelegate.swift in Sources */,
 				C7C76056270AA478001DF94E /* PrimaryButton.swift in Sources */,
