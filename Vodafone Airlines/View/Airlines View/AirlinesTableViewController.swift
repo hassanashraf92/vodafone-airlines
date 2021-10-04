@@ -94,14 +94,14 @@ class AirlinesTableViewController: BaseViewController {
       }
     })
     
-    viewModel.airlineCellViewModels.bind { [weak self] _ in
+    viewModel.airlineViewModels.bind { [weak self] _ in
       DispatchQueue.main.async {
         self?.tableView.reloadData()
       }
     }
     
     viewModel.fetchAirlinesData()
-    
+    viewModel.observeNewAirlineAdd()
   }
   
   @objc private func searchViewTapped(_ sender: UITapGestureRecognizer) {
@@ -110,7 +110,10 @@ class AirlinesTableViewController: BaseViewController {
   }
   
   @objc private func addViewTapped(_ sender: UITapGestureRecognizer) {
-    viewModel?.addNewAirline()
+    let addViewController = UIStoryboard.loadAddAirlineViewController()
+    let viewModel = AddAirlineViewModel()
+    addViewController.viewModel = viewModel
+    self.present(addViewController, animated: true, completion: nil)
   }
   
   
@@ -118,7 +121,7 @@ class AirlinesTableViewController: BaseViewController {
 
 extension AirlinesTableViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel?.airlineCellViewModels.value?.count ?? 0
+    return viewModel?.airlineViewModels.value?.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

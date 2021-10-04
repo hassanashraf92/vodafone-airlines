@@ -35,4 +35,8 @@ extension UIStoryboard {
     return loadFromMain("AirlineDetailsViewController") as! AirlineDetailsViewController
   }
   
+  static func loadAddAirlineViewController() -> AddAirlineViewController {
+    return loadFromMain("AddAirlineViewController") as! AddAirlineViewController
+  }
+  
 }

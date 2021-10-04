@@ -7,6 +7,7 @@ target 'Vodafone Airlines' do
 
   # Pods for Vodafone Airlines
    pod 'Alamofire'
+   pod 'IQKeyboardManagerSwift'
 
   target 'Vodafone AirlinesTests' do
     inherit! :search_paths

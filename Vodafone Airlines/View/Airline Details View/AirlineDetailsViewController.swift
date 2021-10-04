@@ -26,6 +26,7 @@ class AirlineDetailsViewController: BaseViewController {
   }
   @IBOutlet weak var headQuarterTitleLabel: GeneralLabel! {
     didSet {
+      headQuarterTitleLabel.text = "Headquarters"
       headQuarterTitleLabel.bold(with: 14)
     }
   }
@@ -66,7 +67,6 @@ class AirlineDetailsViewController: BaseViewController {
       default: break
       }
     })
-    
     
     viewModel.shouldOpenWebsite?.bind(observer: { [weak self] _ in
       print(viewModel.airline.website, "----->")

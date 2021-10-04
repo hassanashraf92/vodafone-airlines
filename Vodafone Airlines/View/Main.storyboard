@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="973.91304347826099" y="121.875"/>
         </scene>
-        <!--Airline Details View Controller-->
+        <!--Add Airline View Controller-->
         <scene sceneID="8uS-qo-tOx">
             <objects>
-                <viewController storyboardIdentifier="AirlineDetailsViewController" id="b9o-bE-0T4" customClass="AirlineDetailsViewController" customModule="Vodafone_Airlines" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddAirlineViewController" id="b9o-bE-0T4" customClass="AddAirlineViewController" customModule="Vodafone_Airlines" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Om-zd-nvv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,69 +137,91 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-PC-EGr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="297.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYR-gu-sxg" customClass="RoundShadowView" customModule="Vodafone_Airlines" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="30" width="374" height="237.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uX8-NQ-Gd7">
+                                                <rect key="frame" x="20" y="357" width="374" height="465"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-iw-dhY">
-                                                        <rect key="frame" x="20" y="20" width="334" height="197.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdg-VX-6hM" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqN-tZ-Ypn" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="30.5" width="334" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slogan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWS-cl-5T4" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="61" width="334" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headquart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3n-Ov-ziw" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="91.5" width="334" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-AL-i9c" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="122" width="334" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tA3-zF-HWD" customClass="PrimaryButton" customModule="Vodafone_Airlines" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="152.5" width="334" height="45"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="45" id="4dC-aF-abe"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Visit"/>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new airline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUu-rZ-vQR" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqg-fu-C08">
+                                                        <rect key="frame" x="0.0" y="60" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="811-Mb-DGN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3p-Bc-CPG">
+                                                        <rect key="frame" x="0.0" y="120" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="3wH-3e-Fgn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-yk-GEP">
+                                                        <rect key="frame" x="0.0" y="180" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="Wog-RM-eCk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUA-XA-2le">
+                                                        <rect key="frame" x="0.0" y="240" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="GRj-Zc-dCi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-6s-m1i">
+                                                        <rect key="frame" x="0.0" y="300" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="ZCu-YK-1E6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-DJ-vdz" customClass="PrimaryButton" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="360" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="7Q7-vf-iPg"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Confirm"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6b-gb-Dne">
+                                                        <rect key="frame" x="0.0" y="420" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="kJV-Zq-BaX"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Cancel"/>
+                                                    </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="xQu-iw-dhY" firstAttribute="leading" secondItem="KYR-gu-sxg" secondAttribute="leading" constant="20" id="AxG-7p-vN4"/>
-                                                    <constraint firstAttribute="trailing" secondItem="xQu-iw-dhY" secondAttribute="trailing" constant="20" id="CBq-sI-RQk"/>
-                                                    <constraint firstAttribute="bottom" secondItem="xQu-iw-dhY" secondAttribute="bottom" constant="20" id="d9t-wf-BNG"/>
-                                                    <constraint firstItem="xQu-iw-dhY" firstAttribute="top" secondItem="KYR-gu-sxg" secondAttribute="top" constant="20" id="dOT-b5-XlY"/>
-                                                </constraints>
-                                            </view>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-airline-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-Ml-Av1">
+                                                <rect key="frame" x="20" y="58.5" width="374" height="298.5"/>
+                                            </imageView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="InC-LR-uzW">
+                                                <rect key="frame" x="197" y="416" width="20" height="20"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="KYR-gu-sxg" firstAttribute="top" secondItem="RCb-PC-EGr" secondAttribute="top" constant="30" id="JcX-ez-R2S"/>
-                                            <constraint firstAttribute="bottom" secondItem="KYR-gu-sxg" secondAttribute="bottom" constant="30" id="gMV-kl-bpB"/>
-                                            <constraint firstAttribute="trailing" secondItem="KYR-gu-sxg" secondAttribute="trailing" constant="20" id="nn5-Ww-1jX"/>
-                                            <constraint firstItem="KYR-gu-sxg" firstAttribute="leading" secondItem="RCb-PC-EGr" secondAttribute="leading" constant="20" id="uEN-vX-sxf"/>
+                                            <constraint firstItem="uX8-NQ-Gd7" firstAttribute="leading" secondItem="RCb-PC-EGr" secondAttribute="leading" constant="20" id="1aS-Yy-teG"/>
+                                            <constraint firstItem="Lz8-Ml-Av1" firstAttribute="leading" secondItem="RCb-PC-EGr" secondAttribute="leading" constant="20" id="A4e-ue-xG0"/>
+                                            <constraint firstItem="InC-LR-uzW" firstAttribute="centerX" secondItem="RCb-PC-EGr" secondAttribute="centerX" id="PXU-rg-Bgi"/>
+                                            <constraint firstAttribute="bottom" secondItem="uX8-NQ-Gd7" secondAttribute="bottom" constant="30" id="Rmd-he-ajb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lz8-Ml-Av1" secondAttribute="trailing" constant="20" id="g7H-tV-eBr"/>
+                                            <constraint firstItem="InC-LR-uzW" firstAttribute="centerY" secondItem="RCb-PC-EGr" secondAttribute="centerY" id="ja9-fs-pwz"/>
+                                            <constraint firstAttribute="trailing" secondItem="uX8-NQ-Gd7" secondAttribute="trailing" constant="20" id="lYS-fp-Jfg"/>
+                                            <constraint firstItem="Lz8-Ml-Av1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RCb-PC-EGr" secondAttribute="top" constant="20" id="lgh-I0-q6P"/>
+                                            <constraint firstItem="uX8-NQ-Gd7" firstAttribute="top" secondItem="Lz8-Ml-Av1" secondAttribute="bottom" id="zyR-Bn-64A"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -221,24 +243,141 @@
                             <constraint firstItem="pLF-GD-3nx" firstAttribute="trailing" secondItem="0EI-lx-3xF" secondAttribute="trailing" id="6uo-pe-26D"/>
                             <constraint firstItem="pLF-GD-3nx" firstAttribute="top" secondItem="0EI-lx-3xF" secondAttribute="top" id="mpY-qn-Ez2"/>
                             <constraint firstItem="pLF-GD-3nx" firstAttribute="leading" secondItem="0EI-lx-3xF" secondAttribute="leading" id="vd5-7W-gzX"/>
+                            <constraint firstItem="Lz8-Ml-Av1" firstAttribute="height" secondItem="1Om-zd-nvv" secondAttribute="height" multiplier="1:3" id="vfV-TS-sJO"/>
                             <constraint firstAttribute="bottom" secondItem="pLF-GD-3nx" secondAttribute="bottom" id="x4D-ij-NWJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressLabel" destination="n9k-AL-i9c" id="a4u-C8-KhQ"/>
-                        <outlet property="countryLabel" destination="nqN-tZ-Ypn" id="6bJ-ub-cIZ"/>
-                        <outlet property="headQuarterTitleLabel" destination="v3n-Ov-ziw" id="4UG-Rf-Tvu"/>
-                        <outlet property="nameLabel" destination="Gdg-VX-6hM" id="n4S-xh-1rw"/>
-                        <outlet property="sloganLabel" destination="gWS-cl-5T4" id="qj1-0V-yf3"/>
-                        <outlet property="visitButton" destination="tA3-zF-HWD" id="2fO-Lb-kVP"/>
+                        <outlet property="activityIndicator" destination="InC-LR-uzW" id="uFY-4j-Fxe"/>
+                        <outlet property="cancelButton" destination="B6b-gb-Dne" id="vOx-7n-pU8"/>
+                        <outlet property="confirmButton" destination="esZ-DJ-vdz" id="JpF-VO-qCb"/>
+                        <outlet property="countryTextField" destination="MdX-yk-GEP" id="hNF-Bp-0S7"/>
+                        <outlet property="headquartersTextField" destination="DUA-XA-2le" id="IdU-cS-RjL"/>
+                        <outlet property="nameTextField" destination="wqg-fu-C08" id="VPa-Cy-rc5"/>
+                        <outlet property="sloganTextField" destination="x3p-Bc-CPG" id="pIx-MQ-UJ0"/>
+                        <outlet property="titleLabel" destination="JUu-rZ-vQR" id="dmH-ir-4yN"/>
+                        <outlet property="websiteTextField" destination="2Ja-6s-m1i" id="s0L-xV-SVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNv-PY-34L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1811.594202898551" y="121.875"/>
+            <point key="canvasLocation" x="2747.826086956522" y="121.875"/>
+        </scene>
+        <!--Airline Details View Controller-->
+        <scene sceneID="L3H-1v-mwh">
+            <objects>
+                <viewController storyboardIdentifier="AirlineDetailsViewController" id="viV-sS-LY7" customClass="AirlineDetailsViewController" customModule="Vodafone_Airlines" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1L-53-J2f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUy-8F-6GB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Tc-UL-1gi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="297.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HR3-ou-h34" customClass="RoundShadowView" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="30" width="374" height="237.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Df-kz-llz">
+                                                        <rect key="frame" x="20" y="20" width="334" height="197.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-HO-X3A" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vF-KE-J61" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="30.5" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slogan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfR-8i-Tre" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="61" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headquart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3P-Re-ZdB" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="91.5" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8n8-Jj-TnC" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="122" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-PY-6wd" customClass="PrimaryButton" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="152.5" width="334" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="b1v-2d-j60"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Visit"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="0Df-kz-llz" firstAttribute="top" secondItem="HR3-ou-h34" secondAttribute="top" constant="20" id="Bag-i9-gFC"/>
+                                                    <constraint firstItem="0Df-kz-llz" firstAttribute="leading" secondItem="HR3-ou-h34" secondAttribute="leading" constant="20" id="Dbb-na-f9m"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0Df-kz-llz" secondAttribute="trailing" constant="20" id="Vz7-8O-Swj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0Df-kz-llz" secondAttribute="bottom" constant="20" id="jO7-mC-plk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="HR3-ou-h34" firstAttribute="top" secondItem="3Tc-UL-1gi" secondAttribute="top" constant="30" id="Lfr-zO-urY"/>
+                                            <constraint firstAttribute="bottom" secondItem="HR3-ou-h34" secondAttribute="bottom" constant="30" id="aBZ-Dk-79D"/>
+                                            <constraint firstItem="HR3-ou-h34" firstAttribute="leading" secondItem="3Tc-UL-1gi" secondAttribute="leading" constant="20" id="c9P-AJ-Jg8"/>
+                                            <constraint firstAttribute="trailing" secondItem="HR3-ou-h34" secondAttribute="trailing" constant="20" id="wWj-zv-Sv4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Tc-UL-1gi" firstAttribute="height" secondItem="TUy-8F-6GB" secondAttribute="height" priority="250" id="JvV-TC-jRb"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Tc-UL-1gi" secondAttribute="bottom" id="U6S-O4-CZa"/>
+                                    <constraint firstItem="3Tc-UL-1gi" firstAttribute="width" secondItem="TUy-8F-6GB" secondAttribute="width" id="U6h-7X-O2E"/>
+                                    <constraint firstItem="3Tc-UL-1gi" firstAttribute="leading" secondItem="TUy-8F-6GB" secondAttribute="leading" id="cLC-KQ-hmk"/>
+                                    <constraint firstItem="3Tc-UL-1gi" firstAttribute="top" secondItem="TUy-8F-6GB" secondAttribute="top" id="e2r-ux-u6U"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Tc-UL-1gi" secondAttribute="trailing" id="ikz-Tr-TX4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="s8w-qW-tR3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Tvv-CD-LAr"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aqO-UY-A7A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TUy-8F-6GB" secondAttribute="bottom" id="IfW-Ib-Kfc"/>
+                            <constraint firstItem="TUy-8F-6GB" firstAttribute="trailing" secondItem="aqO-UY-A7A" secondAttribute="trailing" id="KOo-dh-Zte"/>
+                            <constraint firstItem="TUy-8F-6GB" firstAttribute="top" secondItem="aqO-UY-A7A" secondAttribute="top" id="qMd-Ta-bBs"/>
+                            <constraint firstItem="TUy-8F-6GB" firstAttribute="leading" secondItem="aqO-UY-A7A" secondAttribute="leading" id="urx-QZ-BCh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="8n8-Jj-TnC" id="NAd-Es-L0P"/>
+                        <outlet property="countryLabel" destination="6vF-KE-J61" id="aD7-b9-dHy"/>
+                        <outlet property="headQuarterTitleLabel" destination="h3P-Re-ZdB" id="ICE-kk-vkP"/>
+                        <outlet property="nameLabel" destination="ouJ-HO-X3A" id="3op-ZY-0BL"/>
+                        <outlet property="sloganLabel" destination="jfR-8i-Tre" id="oPg-9h-INu"/>
+                        <outlet property="visitButton" destination="EeM-PY-6wd" id="FSg-kg-nCR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0a1-bq-0IU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="122"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add-airline-icon" width="380.66665649414062" height="328.66665649414062"/>
         <image name="add-icon" width="25" height="25"/>
         <image name="search-icon" width="25" height="25"/>
         <namedColor name="primary">

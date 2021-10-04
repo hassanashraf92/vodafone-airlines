@@ -12,51 +12,51 @@ import CoreData
 protocol AirlinesTableViewModelProtocol {
   var screenTitle: String { get }
   var state: Bindable<State> { get }
-  var airlineCellViewModels: Bindable<[Airline]> { get }
+  var airlineViewModels: Bindable<[Airline]> { get }
   
-  func addNewAirline()
   func searchAirline(query: String)
   func fetchAirlinesData()
   func getAirline(at indexPath: IndexPath) -> Airline?
   var selectedIndex: IndexPath? { get set }
+  
+  func observeNewAirlineAdd()
 }
 
 class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
-
   
-  var screenTitle: String = "Countries"
-  var state: Bindable<State> = Bindable<State>(.empty)
+  
+  var screenTitle: String
+  var state: Bindable<State>
   
   private var airlines: [Airline] = [Airline]() //For Caching Purpose..
-  var airlineCellViewModels: Bindable<[Airline]> = Bindable<[Airline]>([])
+  var airlineViewModels: Bindable<[Airline]>
   var selectedIndex: IndexPath?
-
+  
   private var dataRepo: AirlinesListRepositoryProtocol
   
   init(repo: AirlinesListRepositoryProtocol = AirlinesListRepository()) {
     self.dataRepo = repo
-      }
-  
-  func addNewAirline() {
-    print("Add New Airline Pressed")
+    screenTitle = "Countries"
+    state = Bindable<State>(.empty)
+    airlineViewModels = Bindable<[Airline]>([])
   }
   
   func searchAirline(query: String) {
     guard !query.isEmpty else {
-      airlineCellViewModels.value = airlines
+      airlineViewModels.value = airlines
       return
     }
     let filtered = airlines.filter({ airline in
       return airline.name.range(of: query, options: .caseInsensitive, range: nil, locale: nil) != nil
     })
-    airlineCellViewModels.value = filtered
+    airlineViewModels.value = filtered
   }
   
   func getAirline(at indexPath: IndexPath) -> Airline? {
-    return airlineCellViewModels.value?[indexPath.row]
+    return airlineViewModels.value?[indexPath.row]
   }
   
-  func fetchAirlinesData() {
+  @objc func fetchAirlinesData() {
     
     self.switchViewModelStateTo(.loading)
     
@@ -72,6 +72,10 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
     }
   }
   
+  func observeNewAirlineAdd() {
+    NotificationCenter.default.addObserver(self, selector: #selector(fetchAirlinesData), name: Notification.Name("NewAirlineAdded"), object: nil)
+  }
+  
   
   //MARK: Helper Functions..
   private func switchViewModelStateTo(_ state: State) {
@@ -80,6 +84,6 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
   
   private func processAirlinesList(_ airlines: [Airline]) {
     self.airlines = airlines
-    self.airlineCellViewModels.value = airlines
+    self.airlineViewModels.value = airlines
   }
 }

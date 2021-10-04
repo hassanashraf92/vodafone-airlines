@@ -21,13 +21,20 @@ class BaseViewController: UIViewController {
     self.navigationController?.navigationBar.layer.shadowOpacity = 1
     self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 3.0)
     self.navigationController?.navigationBar.layer.shadowRadius = 6
-    
+
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
     self.navigationController?.navigationBar.isTranslucent = false
     self.navigationController?.navigationBar.tintColor = UIColor.black // to change the all text color in navigation bar or navigation
     self.navigationController?.navigationBar.barTintColor = UIColor.white // change the navigation background color
-    
-    
+  }
+  
+  func showAlertController(title: String? = "Error", message: String? = "Something went wrong", handler: ( () -> Void )? = nil) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: "OK", style: .default) { _ in
+      handler?()
+    }
+    alert.addAction(action)
+    self.present(alert, animated: true, completion: nil)
   }
   
 }
