@@ -36,6 +36,7 @@ struct AirlineResponse: Codable {
     airline.logo = logo
     airline.slogan = slogan
     airline.website = website
+    airline.address = headQuaters
     AirlineResponse.storage.save()
   }
   

@@ -34,7 +34,8 @@ class AirlinesTableViewController: UIViewController {
     didSet {
       tableView.delegate = self
       tableView.dataSource = self
-      tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+      let nib = UINib(nibName: "AirlineTableViewCell", bundle: nil)
+      tableView.register(nib, forCellReuseIdentifier: "AirlineTableViewCell")
     }
   }
   @IBOutlet weak var addView: CircleShadowView! {
@@ -131,10 +132,24 @@ extension AirlinesTableViewController: UITableViewDelegate, UITableViewDataSourc
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath) as? UITableViewCell
-    cell?.textLabel?.text = viewModel?.getAirline(at: indexPath)?.name
-    return cell!
+    let cell = tableView.dequeueReusableCell(withIdentifier: "AirlineTableViewCell", for: indexPath) as! AirlineTableViewCell
+    let airline = viewModel?.getAirline(at: indexPath)
+    cell.configure(airline!)
+    cell.selectionStyle = .none
+    return cell
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let index = viewModel?.selectedIndex else { return }
+    guard let airline = viewModel?.getAirline(at: index) else { return }
+    let airlineDetailsViewController = UIStoryboard.loadAirlineDetailsViewController()
+    airlineDetailsViewController.viewModel = AirlineDetailsViewModel(airline)
+    self.navigationController?.pushViewController(airlineDetailsViewController, animated: true)
+  }
+  
+  func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    viewModel?.selectedIndex = indexPath
+    return indexPath
+  }
   
 }

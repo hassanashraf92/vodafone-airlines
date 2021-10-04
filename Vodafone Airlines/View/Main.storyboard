@@ -32,8 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYI-do-V0p">
-                                <rect key="frame" x="0.0" y="129" width="414" height="767"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYI-do-V0p">
+                                <rect key="frame" x="0.0" y="137" width="414" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVa-YC-rjm">
@@ -99,7 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="Fhx-zv-P26"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gYI-do-V0p" firstAttribute="top" secondItem="OVa-YC-rjm" secondAttribute="bottom" id="3xL-FO-NuC"/>
+                            <constraint firstItem="gYI-do-V0p" firstAttribute="top" secondItem="OVa-YC-rjm" secondAttribute="bottom" constant="8" id="3xL-FO-NuC"/>
                             <constraint firstAttribute="bottom" secondItem="gYI-do-V0p" secondAttribute="bottom" id="5rf-Ze-K6A"/>
                             <constraint firstItem="OVa-YC-rjm" firstAttribute="leading" secondItem="Fhx-zv-P26" secondAttribute="leading" id="6aX-Nl-UOZ"/>
                             <constraint firstItem="gYI-do-V0p" firstAttribute="leading" secondItem="Fhx-zv-P26" secondAttribute="leading" id="AIY-xn-5C1"/>
@@ -124,6 +124,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEv-Hw-ncj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973.91304347826099" y="121.875"/>
+        </scene>
+        <!--Airline Details View Controller-->
+        <scene sceneID="8uS-qo-tOx">
+            <objects>
+                <viewController storyboardIdentifier="AirlineDetailsViewController" id="b9o-bE-0T4" customClass="AirlineDetailsViewController" customModule="Vodafone_Airlines" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Om-zd-nvv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-GD-3nx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-PC-EGr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="297.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYR-gu-sxg" customClass="RoundShadowView" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="30" width="374" height="237.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-iw-dhY">
+                                                        <rect key="frame" x="20" y="20" width="334" height="197.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdg-VX-6hM" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqN-tZ-Ypn" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="30.5" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slogan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWS-cl-5T4" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="61" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headquart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3n-Ov-ziw" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="91.5" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-AL-i9c" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="122" width="334" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tA3-zF-HWD" customClass="PrimaryButton" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="152.5" width="334" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="4dC-aF-abe"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Visit"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="xQu-iw-dhY" firstAttribute="leading" secondItem="KYR-gu-sxg" secondAttribute="leading" constant="20" id="AxG-7p-vN4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xQu-iw-dhY" secondAttribute="trailing" constant="20" id="CBq-sI-RQk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xQu-iw-dhY" secondAttribute="bottom" constant="20" id="d9t-wf-BNG"/>
+                                                    <constraint firstItem="xQu-iw-dhY" firstAttribute="top" secondItem="KYR-gu-sxg" secondAttribute="top" constant="20" id="dOT-b5-XlY"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="KYR-gu-sxg" firstAttribute="top" secondItem="RCb-PC-EGr" secondAttribute="top" constant="30" id="JcX-ez-R2S"/>
+                                            <constraint firstAttribute="bottom" secondItem="KYR-gu-sxg" secondAttribute="bottom" constant="30" id="gMV-kl-bpB"/>
+                                            <constraint firstAttribute="trailing" secondItem="KYR-gu-sxg" secondAttribute="trailing" constant="20" id="nn5-Ww-1jX"/>
+                                            <constraint firstItem="KYR-gu-sxg" firstAttribute="leading" secondItem="RCb-PC-EGr" secondAttribute="leading" constant="20" id="uEN-vX-sxf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RCb-PC-EGr" firstAttribute="leading" secondItem="pLF-GD-3nx" secondAttribute="leading" id="V6A-FW-r1W"/>
+                                    <constraint firstItem="RCb-PC-EGr" firstAttribute="width" secondItem="pLF-GD-3nx" secondAttribute="width" id="YIs-W9-hDv"/>
+                                    <constraint firstItem="RCb-PC-EGr" firstAttribute="top" secondItem="pLF-GD-3nx" secondAttribute="top" id="com-50-6xQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="RCb-PC-EGr" secondAttribute="bottom" id="f5d-ki-RSo"/>
+                                    <constraint firstAttribute="trailing" secondItem="RCb-PC-EGr" secondAttribute="trailing" id="iyc-dW-mGm"/>
+                                    <constraint firstItem="RCb-PC-EGr" firstAttribute="height" secondItem="pLF-GD-3nx" secondAttribute="height" priority="250" id="ldi-Ie-zc1"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="CYd-f2-Dlk"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Dzj-lE-Ccs"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0EI-lx-3xF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pLF-GD-3nx" firstAttribute="trailing" secondItem="0EI-lx-3xF" secondAttribute="trailing" id="6uo-pe-26D"/>
+                            <constraint firstItem="pLF-GD-3nx" firstAttribute="top" secondItem="0EI-lx-3xF" secondAttribute="top" id="mpY-qn-Ez2"/>
+                            <constraint firstItem="pLF-GD-3nx" firstAttribute="leading" secondItem="0EI-lx-3xF" secondAttribute="leading" id="vd5-7W-gzX"/>
+                            <constraint firstAttribute="bottom" secondItem="pLF-GD-3nx" secondAttribute="bottom" id="x4D-ij-NWJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="n9k-AL-i9c" id="a4u-C8-KhQ"/>
+                        <outlet property="countryLabel" destination="nqN-tZ-Ypn" id="6bJ-ub-cIZ"/>
+                        <outlet property="headQuarterTitleLabel" destination="v3n-Ov-ziw" id="4UG-Rf-Tvu"/>
+                        <outlet property="nameLabel" destination="Gdg-VX-6hM" id="n4S-xh-1rw"/>
+                        <outlet property="sloganLabel" destination="gWS-cl-5T4" id="qj1-0V-yf3"/>
+                        <outlet property="visitButton" destination="tA3-zF-HWD" id="2fO-Lb-kVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNv-PY-34L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1811.594202898551" y="121.875"/>
         </scene>
     </scenes>
     <resources>

@@ -16,4 +16,5 @@ public class Airline: NSManagedObject {
   @NSManaged var slogan: String?
   @NSManaged var established: String?
   @NSManaged var website: String?
+  @NSManaged var address: String?
 }

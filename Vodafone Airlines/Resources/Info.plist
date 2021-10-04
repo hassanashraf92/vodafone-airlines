@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Vodafone-Bold.ttf</string>
+		<string>Vodafone-Light.ttf</string>
+		<string>Vodafone-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

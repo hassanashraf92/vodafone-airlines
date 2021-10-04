@@ -18,6 +18,7 @@ protocol AirlinesTableViewModelProtocol {
   func searchAirline(query: String)
   func fetchAirlinesData()
   func getAirline(at indexPath: IndexPath) -> Airline?
+  var selectedIndex: IndexPath? { get set }
 }
 
 class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
@@ -28,7 +29,7 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
   
   private var airlines: [Airline] = [Airline]() //For Caching Purpose..
   var airlineCellViewModels: Bindable<[Airline]> = Bindable<[Airline]>([])
-  
+  var selectedIndex: IndexPath?
 
   private var dataRepo: AirlinesListRepositoryProtocol
   

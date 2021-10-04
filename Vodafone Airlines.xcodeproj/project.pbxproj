@@ -36,6 +36,16 @@
 		C7C76043270A59E8001DF94E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76042270A59E8001DF94E /* APIManager.swift */; };
 		C7C76045270A59FD001DF94E /* EndPointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76044270A59FD001DF94E /* EndPointItem.swift */; };
 		C7C76048270A6E14001DF94E /* Airline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76047270A6E14001DF94E /* Airline.swift */; };
+		C7C7604D270A7E28001DF94E /* AirlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7604B270A7E28001DF94E /* AirlineTableViewCell.swift */; };
+		C7C7604E270A7E28001DF94E /* AirlineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C7604C270A7E28001DF94E /* AirlineTableViewCell.xib */; };
+		C7C76052270A8081001DF94E /* AirlineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76051270A8081001DF94E /* AirlineDetailsViewController.swift */; };
+		C7C76054270A8092001DF94E /* AirlineDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76053270A8092001DF94E /* AirlineDetailsViewModel.swift */; };
+		C7C76056270AA478001DF94E /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76055270AA478001DF94E /* PrimaryButton.swift */; };
+		C7C7605B270AA763001DF94E /* Vodafone-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C76058270AA763001DF94E /* Vodafone-Regular.ttf */; };
+		C7C7605C270AA763001DF94E /* Vodafone-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C76059270AA763001DF94E /* Vodafone-Light.ttf */; };
+		C7C7605D270AA763001DF94E /* Vodafone-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C7605A270AA763001DF94E /* Vodafone-Bold.ttf */; };
+		C7C7605F270AA835001DF94E /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7605E270AA835001DF94E /* FontFamily.swift */; };
+		C7C76061270AA8BB001DF94E /* GeneralLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C76060270AA8BB001DF94E /* GeneralLabel.swift */; };
 		E119C2E21D12D7BC57F56151 /* Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FFE9537E2079F2922E2F37 /* Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +106,16 @@
 		C7C76042270A59E8001DF94E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C7C76044270A59FD001DF94E /* EndPointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointItem.swift; sourceTree = "<group>"; };
 		C7C76047270A6E14001DF94E /* Airline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airline.swift; sourceTree = "<group>"; };
+		C7C7604B270A7E28001DF94E /* AirlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineTableViewCell.swift; sourceTree = "<group>"; };
+		C7C7604C270A7E28001DF94E /* AirlineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirlineTableViewCell.xib; sourceTree = "<group>"; };
+		C7C76051270A8081001DF94E /* AirlineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineDetailsViewController.swift; sourceTree = "<group>"; };
+		C7C76053270A8092001DF94E /* AirlineDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineDetailsViewModel.swift; sourceTree = "<group>"; };
+		C7C76055270AA478001DF94E /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		C7C76058270AA763001DF94E /* Vodafone-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vodafone-Regular.ttf"; sourceTree = "<group>"; };
+		C7C76059270AA763001DF94E /* Vodafone-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vodafone-Light.ttf"; sourceTree = "<group>"; };
+		C7C7605A270AA763001DF94E /* Vodafone-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vodafone-Bold.ttf"; sourceTree = "<group>"; };
+		C7C7605E270AA835001DF94E /* FontFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
+		C7C76060270AA8BB001DF94E /* GeneralLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLabel.swift; sourceTree = "<group>"; };
 		D940FAEE6664309AAB4D84E2 /* Pods-Vodafone Airlines.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vodafone Airlines.release.xcconfig"; path = "Target Support Files/Pods-Vodafone Airlines/Pods-Vodafone Airlines.release.xcconfig"; sourceTree = "<group>"; };
 		E8D61AD1A6628C951CF88DFB /* Pods-Vodafone AirlinesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vodafone AirlinesTests.release.xcconfig"; path = "Target Support Files/Pods-Vodafone AirlinesTests/Pods-Vodafone AirlinesTests.release.xcconfig"; sourceTree = "<group>"; };
 		F9FFE9537E2079F2922E2F37 /* Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vodafone_Airlines_Vodafone_AirlinesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,7 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				C7C75FA427092B06001DF94E /* Common Views */,
-				C7C75F8F2707EEF3001DF94E /* AirlinesTableViewController.swift */,
+				C7C7604F270A7E2D001DF94E /* Airlines View */,
+				C7C76050270A8070001DF94E /* Airline Details View */,
 				C7C75F912707F23D001DF94E /* Main.storyboard */,
 			);
 			path = View;
@@ -229,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				C7C75FA22707FF4F001DF94E /* AirlinesTableViewModel.swift */,
+				C7C76053270A8092001DF94E /* AirlineDetailsViewModel.swift */,
 				C7C75FA527092B6E001DF94E /* State.swift */,
 				C7C75FA727092D7E001DF94E /* Bindable.swift */,
 			);
@@ -250,6 +272,8 @@
 			children = (
 				C7C75F9E2707FC9A001DF94E /* CircleShadowView.swift */,
 				C7C75FA02707FED3001DF94E /* RoundShadowView.swift */,
+				C7C76055270AA478001DF94E /* PrimaryButton.swift */,
+				C7C76060270AA8BB001DF94E /* GeneralLabel.swift */,
 			);
 			path = "Common Views";
 			sourceTree = "<group>";
@@ -257,6 +281,7 @@
 		C7C75FA927094E58001DF94E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C7C76057270AA74A001DF94E /* Font */,
 				C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */,
 				C7C75F932707F262001DF94E /* HomeViewController.swift */,
 				C7C75F632707E7A8001DF94E /* Assets.xcassets */,
@@ -303,6 +328,35 @@
 				C7C76047270A6E14001DF94E /* Airline.swift */,
 			);
 			path = "CoreData Models";
+			sourceTree = "<group>";
+		};
+		C7C7604F270A7E2D001DF94E /* Airlines View */ = {
+			isa = PBXGroup;
+			children = (
+				C7C7604B270A7E28001DF94E /* AirlineTableViewCell.swift */,
+				C7C7604C270A7E28001DF94E /* AirlineTableViewCell.xib */,
+				C7C75F8F2707EEF3001DF94E /* AirlinesTableViewController.swift */,
+			);
+			path = "Airlines View";
+			sourceTree = "<group>";
+		};
+		C7C76050270A8070001DF94E /* Airline Details View */ = {
+			isa = PBXGroup;
+			children = (
+				C7C76051270A8081001DF94E /* AirlineDetailsViewController.swift */,
+			);
+			path = "Airline Details View";
+			sourceTree = "<group>";
+		};
+		C7C76057270AA74A001DF94E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C7C7605A270AA763001DF94E /* Vodafone-Bold.ttf */,
+				C7C76059270AA763001DF94E /* Vodafone-Light.ttf */,
+				C7C76058270AA763001DF94E /* Vodafone-Regular.ttf */,
+				C7C7605E270AA835001DF94E /* FontFamily.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,10 +467,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C7604E270A7E28001DF94E /* AirlineTableViewCell.xib in Resources */,
 				C7C75F672707E7A8001DF94E /* LaunchScreen.storyboard in Resources */,
+				C7C7605D270AA763001DF94E /* Vodafone-Bold.ttf in Resources */,
 				C7C760362709FAFB001DF94E /* airlines.json in Resources */,
 				C7C75F9D2707FB6D001DF94E /* Colors.xcassets in Resources */,
 				C7C75F642707E7A8001DF94E /* Assets.xcassets in Resources */,
+				C7C7605C270AA763001DF94E /* Vodafone-Light.ttf in Resources */,
+				C7C7605B270AA763001DF94E /* Vodafone-Regular.ttf in Resources */,
 				C7C75F922707F23D001DF94E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,14 +608,20 @@
 				C7C75FF22709F454001DF94E /* CoraDataStorage.swift in Sources */,
 				C7C75FA12707FED3001DF94E /* RoundShadowView.swift in Sources */,
 				C7C7603E270A18FF001DF94E /* AirlinesListRepository.swift in Sources */,
+				C7C76061270AA8BB001DF94E /* GeneralLabel.swift in Sources */,
 				C7C75F5B2707E7A5001DF94E /* AppDelegate.swift in Sources */,
+				C7C76056270AA478001DF94E /* PrimaryButton.swift in Sources */,
+				C7C76052270A8081001DF94E /* AirlineDetailsViewController.swift in Sources */,
 				C7C760342709FA8E001DF94E /* Vodafone_Airlines.xcdatamodeld in Sources */,
+				C7C76054270A8092001DF94E /* AirlineDetailsViewModel.swift in Sources */,
 				C7C75FA627092B6E001DF94E /* State.swift in Sources */,
 				C7C76048270A6E14001DF94E /* Airline.swift in Sources */,
 				C7C7603B270A1575001DF94E /* AirlinesRemoteRepository.swift in Sources */,
+				C7C7604D270A7E28001DF94E /* AirlineTableViewCell.swift in Sources */,
 				C7C75F972707F2F8001DF94E /* UIStoryboard+Extension.swift in Sources */,
 				C7C75F9B2707F8E8001DF94E /* UIColor+Theme.swift in Sources */,
 				C7C75F992707F488001DF94E /* UIViewController+Extension.swift in Sources */,
+				C7C7605F270AA835001DF94E /* FontFamily.swift in Sources */,
 				C7C75FA827092D7E001DF94E /* Bindable.swift in Sources */,
 				C7C76045270A59FD001DF94E /* EndPointItem.swift in Sources */,
 				C7C75F942707F262001DF94E /* HomeViewController.swift in Sources */,

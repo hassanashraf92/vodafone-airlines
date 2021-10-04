@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="168" id="KGk-i7-Jjw" customClass="AirlineTableViewCell" customModule="Vodafone_Airlines" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="651" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="651" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6e-Tk-e1U" customClass="RoundShadowView" customModule="Vodafone_Airlines" customModuleProvider="target">
+                        <rect key="frame" x="20" y="8" width="611" height="152"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8U-dY-gnz" customClass="GeneralLabel" customModule="Vodafone_Airlines" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="42" height="112"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-icon" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-Qr-ZwK">
+                                <rect key="frame" x="566" y="63.5" width="25" height="25"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="E8U-dY-gnz" secondAttribute="bottom" constant="20" id="0fs-D2-wIu"/>
+                            <constraint firstItem="E8U-dY-gnz" firstAttribute="top" secondItem="f6e-Tk-e1U" secondAttribute="top" constant="20" id="5bd-Sb-3oE"/>
+                            <constraint firstAttribute="trailing" secondItem="3Sn-Qr-ZwK" secondAttribute="trailing" constant="20" id="lgp-Jj-Wl3"/>
+                            <constraint firstItem="E8U-dY-gnz" firstAttribute="leading" secondItem="f6e-Tk-e1U" secondAttribute="leading" constant="20" id="mai-Vi-pew"/>
+                            <constraint firstItem="3Sn-Qr-ZwK" firstAttribute="centerY" secondItem="E8U-dY-gnz" secondAttribute="centerY" id="rvx-h4-qlj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="f6e-Tk-e1U" secondAttribute="trailing" constant="20" id="BBQ-aF-Ofe"/>
+                    <constraint firstItem="f6e-Tk-e1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BxP-xd-paE"/>
+                    <constraint firstItem="f6e-Tk-e1U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="GcG-be-t7u"/>
+                    <constraint firstAttribute="bottom" secondItem="f6e-Tk-e1U" secondAttribute="bottom" constant="8" id="WIK-C7-D8j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="f6e-Tk-e1U" id="r8q-vw-r1J"/>
+                <outlet property="nameLabel" destination="E8U-dY-gnz" id="WRC-eT-Kud"/>
+            </connections>
+            <point key="canvasLocation" x="345.6521739130435" y="123.21428571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow-icon" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
