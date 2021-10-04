@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Airline" representedClassName=".Airline" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="established" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="logo" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="slogan" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Airline" positionX="-54" positionY="-9" width="128" height="59"/>
+        <element name="Airline" positionX="-54" positionY="-9" width="128" height="119"/>
     </elements>
 </model>

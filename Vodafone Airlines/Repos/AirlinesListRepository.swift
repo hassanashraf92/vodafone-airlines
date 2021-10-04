@@ -14,57 +14,51 @@ protocol AirlinesListRepositoryProtocol {
 class AirlinesListRepository {
   
   var fetchData: (() -> ())?
-  private let apiService: APIService
+  private let apiService: AirlinesRemoteRepository
   private var dbContainer: CoreDataStorage?
   
   init() {
-    self.apiService = APIService()
+    self.apiService = AirlinesRemoteRepository()
     self.dbContainer = CoreDataStorage.shared
   }
   
-  private func saveToCoreData(for entityName: String) {
+  private func saveToCoreData(for entityName: String, data: Airlines, completion: @escaping (_ finished: Bool) -> ()) {
     CoreDataStorage.shared.clearStorage(forEntity: entityName)
-    CoreDataStorage.shared.saveContext()
-    
+    data.forEach { $0.store() }
+    completion(true)
     let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     print(paths[0])
   }
   
-  private func getFromCoreData(completion: @escaping (_ airlines: [Airline]?,_ error: String?) -> ()) {
-    //TODO: Retreive Data..
-    let result = CoreDataStorage.shared.fetchData(entityName: "Airline")
-    guard let airlines = result as? [Airline], !airlines.isEmpty else {
-      completion(nil, "Empty Storage")
-      return
-    }
-    completion(airlines, nil)
-  }
   
+  private func fetchFromCoreData() -> [Airline] {
+//    let ss = CoreDataStorage.shared.fetchData(entityName: "Airline") as! [Airline]
+    let airlines = CoreDataStorage.shared.fetch(Airline.self)
+    return airlines
+  }
 }
 
 extension AirlinesListRepository: AirlinesListRepositoryProtocol {
   
   func fetchAirlinesData(complete: @escaping (Bool, [Airline], String?) -> ()) {
-    APIService.fetchAirlinesData { [weak self] success, airlines, error in
+    
+    apiService.fetchAirlinesData { success, airlines, error in
       switch success {
       case true:
         DispatchQueue.main.async {
-          self?.saveToCoreData(for: "Airline")
+          //TODO: Save to DB
+          self.saveToCoreData(for: "Airline", data: airlines) { finished in
+            complete(true, self.fetchFromCoreData(), nil)
+          }
         }
-        complete(true, airlines, nil)
+        break
       case false:
         DispatchQueue.main.async {
-          self?.getFromCoreData(completion: { airlines, error in
-            guard airlines != nil else {
-              complete(false, [], "First time run with no internet connection..")
-              return
-            }
-            
-            guard let airlines = airlines else { return }
-            complete(true, airlines, nil)
-          })
+          //TODO: Get from DB
+          complete(true, self.fetchFromCoreData(), nil)
         }
+        break
       }
     }
   }

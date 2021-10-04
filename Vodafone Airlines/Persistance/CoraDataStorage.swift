@@ -13,7 +13,7 @@ class CoreDataStorage: NSObject {
   static let shared = CoreDataStorage()
   
   //MARK: Coredata stack
-  lazy var persistentContainer: NSPersistentContainer = {
+  var persistentContainer: NSPersistentContainer = {
     /*
      The persistent container for the application. This implementation
      creates and returns a container, having loaded the store for the
@@ -60,18 +60,32 @@ class CoreDataStorage: NSObject {
     return persistentContainer.viewContext
   }
   
+  func save() {
+    do {
+      try managedObjectContext().save()
+    } catch {
+      print(error.localizedDescription)
+    }
+  }
+  
+  func add<T: NSManagedObject>(_ type: T.Type) -> T? {
+    guard let entityName = T.entity().name else { return nil }
+    guard let entity = NSEntityDescription.entity(forEntityName: entityName, in: managedObjectContext()) else { return nil }
+    let object = T(entity: entity, insertInto: managedObjectContext())
+    return object
+  }
+  
   func clearStorage(forEntity entity: String) {
     let isInMemoryStore = persistentContainer.persistentStoreDescriptions.reduce(false) {
       return $0 ? true : $1.type == NSInMemoryStoreType
     }
     
-    let managedObjectContext = persistentContainer.viewContext
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
     if isInMemoryStore {
       do {
-        let entities = try managedObjectContext.fetch(fetchRequest)
+        let entities = try managedObjectContext().fetch(fetchRequest)
         for entity in entities {
-          managedObjectContext.delete(entity as! NSManagedObject)
+          managedObjectContext().delete(entity as! NSManagedObject)
         }
       } catch let error as NSError {
         print(error)
@@ -79,16 +93,41 @@ class CoreDataStorage: NSObject {
     } else {
       let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
       do {
-        try managedObjectContext.execute(batchDeleteRequest)
+        try managedObjectContext().execute(batchDeleteRequest)
       } catch let error as NSError {
         print(error)
       }
     }
   }
   
+  func fetch<T: NSManagedObject>(_ type: T.Type) -> [T] {
+    guard let entityName = T.entity().name else { return [] }
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+    let context = managedObjectContext()
+    
+//    let request = T.fetchRequest()
+    
+    do {
+      let result = try context.fetch(fetchRequest)
+      print("Result of Fetching from CoreData is \(result.debugDescription)")
+      return result as! [T]
+    } catch {
+      print("Fetch failed..")
+      return []
+    }
+    
+//    do {
+//      let result = try managedObjectContext().fetch(request)
+//      return result as! [T]
+//    } catch {
+//      print(error.localizedDescription)
+//      return []
+//    }
+  }
+  
   func fetchData(entityName: String) -> [NSManagedObject] {
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
-    let context = persistentContainer.viewContext
+    let context = managedObjectContext()
     do {
       let result = try context.fetch(fetchRequest)
       print("Result of Fetching from CoreData is \(result.debugDescription)")
