@@ -18,6 +18,7 @@ protocol AirlinesTableViewModelProtocol {
   func fetchAirlinesData()
   func getAirline(at indexPath: IndexPath) -> Airline?
   var selectedIndex: IndexPath? { get set }
+  var errorMessage: String? { get }
   
   func observeNewAirlineAdd()
 }
@@ -31,6 +32,7 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
   private var airlines: [Airline] = [Airline]() //For Caching Purpose..
   var airlineViewModels: Bindable<[Airline]>
   var selectedIndex: IndexPath?
+  var errorMessage: String?
   
   private var dataRepo: AirlinesListRepositoryProtocol
   
@@ -64,6 +66,7 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
       guard let self = self else { return }
       guard error == nil else {
         self.switchViewModelStateTo(.error)
+        self.errorMessage = error
         return
       }
       
@@ -72,6 +75,7 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
     }
   }
   
+  //TODO: Handle it locally instead for better response
   func observeNewAirlineAdd() {
     NotificationCenter.default.addObserver(self, selector: #selector(fetchAirlinesData), name: Notification.Name("NewAirlineAdded"), object: nil)
   }

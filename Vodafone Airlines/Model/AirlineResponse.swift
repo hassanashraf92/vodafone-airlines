@@ -40,4 +40,17 @@ struct AirlineResponse: Codable {
     AirlineResponse.storage.save()
   }
   
+  func convert() -> Airline? { //For testing purpose..
+    let airline = Airline()
+    airline.id = Int16(id ?? 0)
+    airline.name = name ?? ""
+    airline.country = country ?? ""
+    airline.established = established
+    airline.logo = logo
+    airline.slogan = slogan
+    airline.website = website
+    airline.address = headQuaters
+    return airline
+  }
+  
 }

@@ -75,7 +75,7 @@ class AddAirlineViewModel: NSObject, AddAirlineViewModelProtocol {
   }
   
   //MARK: Basic Validation.. (For more complicated validation, we could build one using Factory Design Pattern)
-  private func validate() -> Bool {
+  func validate() -> Bool {
     
     guard let name = airlineName, !name.isEmpty, name.count > 2 else {
       self.errorMessage.value = "Please enter a valid name"

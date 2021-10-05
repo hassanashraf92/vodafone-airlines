@@ -72,6 +72,7 @@ class AirlinesTableViewController: BaseViewController {
           UIView.animate(withDuration: 0.2) {
             self.tableView.alpha = 0.0
           }
+          self.showAlertController(title: "Something went wrong", message: viewModel.errorMessage)
         }
       case .loading:
         DispatchQueue.main.async {
@@ -101,6 +102,8 @@ class AirlinesTableViewController: BaseViewController {
     }
     
     viewModel.fetchAirlinesData()
+    
+    //Observing new airline addition in order to reload data from API
     viewModel.observeNewAirlineAdd()
   }
   

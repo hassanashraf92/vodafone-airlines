@@ -17,4 +17,5 @@ public class Airline: NSManagedObject {
   @NSManaged var established: String?
   @NSManaged var website: String?
   @NSManaged var address: String?
+  
 }
