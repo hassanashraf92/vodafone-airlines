@@ -11,7 +11,7 @@ import UIKit
 protocol AirlineDetailsViewModelProtocol {
   var screenTitle: String { get }
   var state: Bindable<State> { get }
-  var airline: Airline { get }
+  var airline: AirlineViewModel { get }
   var shouldOpenWebsite: Bindable<Bool>? { get }
   func fetchData()
   func didPressVisit()
@@ -21,10 +21,10 @@ class AirlineDetailsViewModel: NSObject, AirlineDetailsViewModelProtocol {
   
   var screenTitle: String
   var state: Bindable<State> = Bindable<State>(.empty)
-  var airline: Airline
+  var airline: AirlineViewModel
   var shouldOpenWebsite: Bindable<Bool>? = Bindable<Bool>(false)
   
-  init(_ airline: Airline) {
+  init(_ airline: AirlineViewModel) {
     self.screenTitle = "Countries"
     self.airline = airline
   }
@@ -34,7 +34,7 @@ class AirlineDetailsViewModel: NSObject, AirlineDetailsViewModelProtocol {
   }
   
   func didPressVisit() {
-    guard let website = airline.website else { return }
+    guard let website = airline.website, !website.isEmpty else { return }
     self.airline.website = "https://\(website)"
     self.shouldOpenWebsite?.value = true
   }

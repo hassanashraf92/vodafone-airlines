@@ -29,27 +29,21 @@ class AddAirlineViewModelTests: XCTestCase {
   }
   
   //TODO: Test Validation on each input.
-
   func test_validation() {
-    sut.airlineName = "New Airline"
-    sut.airlineCountry = "Egypt"
-    sut.airlineSlogan = "Not really.."
-    sut.airlineAddress = "13/2 Hassan Nassar"
-    sut.airlineWebsite = "www.vodafone.com"
-    XCTAssert(sut.validate())
-  }
-  
-  func test_validation_fails() {
-    sut.airlineName = "New Airline"
-    sut.airlineCountry = "Egypt"
-    sut.airlineSlogan = "Not really.."
-    sut.airlineAddress = "13/2 Hassan Nassar"
-    sut.airlineWebsite = ""
-    XCTAssertEqual(sut.validate(), false)
+    sut.airlineViewModel = AirlineViewModel()
+    sut.airlineViewModel?.name = "Vodafone"
+    sut.airlineViewModel?.address = "Smart Village"
+    sut.airlineViewModel?.country = "Egypt"
+    sut.airlineViewModel?.slogan = "Slogan.."
+    sut.airlineViewModel?.website = "www.vodafone.com"
+//    sut.validate()
+    XCTAssertTrue(sut.validate())
   }
   
   func test_add_new_airline() {
+    
     // When start fetch
+    sut.airlineViewModel = AirlineViewModel()
     sut.addAirline()
     
     // Assert
@@ -63,6 +57,7 @@ class AddAirlineViewModelTests: XCTestCase {
     let errorMessage = "Something went wrong.."
     
     // When
+    sut.airlineViewModel = AirlineViewModel()
     sut.addAirline()
     
     mockAPIService.addFails(error: errorMessage)
@@ -75,15 +70,14 @@ class AddAirlineViewModelTests: XCTestCase {
 }
 
 class AddAirlineMockAPIService: AddAirlineRepositoryProtocol {
-  
+ 
   var closure: ((Bool, String?) -> ())!
   var isAddedSuccessfully = false
   
-  func AddAirline(name: String, slogan: String, country: String, headquarter: String, website: String, complete: @escaping (Bool, String?) -> ()) {
+  func AddAirline(airline: AirlineViewModel, complete: @escaping (Bool, String?) -> ()) {
     isAddedSuccessfully = true
     closure = complete
   }
-  
   
   func addSuccess() {
     closure(true, nil)

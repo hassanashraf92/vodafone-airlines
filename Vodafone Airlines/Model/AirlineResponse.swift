@@ -7,15 +7,13 @@
 
 import Foundation
 
-typealias Airlines = [AirlineResponse]
-
 // MARK: - Airline
 struct AirlineResponse: Codable {
-  let id: Int?
-  let name, country: String?
-  let logo: String?
-  let slogan, headQuaters, website, established: String?
-  let requestedID: String?
+  var id: Int?
+  var name, country: String?
+  var logo: String?
+  var slogan, headQuaters, website, established: String?
+  var requestedID: String?
   
   enum CodingKeys: String, CodingKey {
     case id, name, country, logo, slogan
@@ -51,6 +49,42 @@ struct AirlineResponse: Codable {
     airline.website = website
     airline.address = headQuaters
     return airline
+  }
+  
+  init(_ airline: Airline) {
+    self.id = Int(airline.id)
+    self.name = airline.name
+    self.country = airline.country
+    self.established = airline.established
+    self.logo = airline.logo
+    self.slogan = airline.slogan
+    self.website = airline.website
+    self.headQuaters = airline.address
+  }
+  
+}
+
+struct AirlineViewModel {
+  var id: Int?
+  var name: String?
+  var country: String?
+  var address: String?
+  var slogan: String?
+  var website: String?
+  var searchQuery: String?
+  
+  
+  init() {}
+  
+  init(_ airline: AirlineResponse) {
+    self.id = airline.id
+    self.name = airline.name
+    self.country = airline.country
+    self.address = airline.headQuaters
+    self.slogan = airline.slogan
+    self.website = airline.website
+    self.searchQuery = "\(id)\(name)\(country)"
+    
   }
   
 }

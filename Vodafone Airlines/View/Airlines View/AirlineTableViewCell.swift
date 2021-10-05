@@ -18,7 +18,7 @@ class AirlineTableViewCell: UITableViewCell {
     // Initialization code
   }
   
-  func configure(_ airline: Airline) {
+  func configure(_ airline: AirlineViewModel) {
     self.nameLabel.text = airline.name
   }
   

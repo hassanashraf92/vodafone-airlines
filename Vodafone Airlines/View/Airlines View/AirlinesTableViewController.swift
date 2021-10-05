@@ -65,7 +65,7 @@ class AirlinesTableViewController: BaseViewController {
     viewModel.state.bind(observer: { [weak self] state in
       guard let self = self else { return }
       switch state {
-      case .empty, .error:
+      case .error:
         DispatchQueue.main.async {
           self.activityIndicator.stopAnimating()
           self.activityIndicator.isHidden = true
@@ -118,8 +118,6 @@ class AirlinesTableViewController: BaseViewController {
     addViewController.viewModel = viewModel
     self.present(addViewController, animated: true, completion: nil)
   }
-  
-  
 }
 
 extension AirlinesTableViewController: UITableViewDelegate, UITableViewDataSource {
@@ -128,9 +126,9 @@ extension AirlinesTableViewController: UITableViewDelegate, UITableViewDataSourc
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "AirlineTableViewCell", for: indexPath) as! AirlineTableViewCell
-    let airline = viewModel?.getAirline(at: indexPath)
-    cell.configure(airline!)
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "AirlineTableViewCell", for: indexPath) as? AirlineTableViewCell,
+          let airline = viewModel?.getAirline(at: indexPath) else { return UITableViewCell() }
+    cell.configure(airline)
     cell.selectionStyle = .none
     return cell
   }

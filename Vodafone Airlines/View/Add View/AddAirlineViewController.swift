@@ -123,21 +123,20 @@ class AddAirlineViewController: BaseViewController {
     
   }
   
-  
-  
+  //MARK: IBActions
   @objc private func confirmButtonPressed(_ sender: PrimaryButton) {
-    viewModel?.airlineName = nameTextField.text
-    viewModel?.airlineCountry = countryTextField.text
-    viewModel?.airlineSlogan = sloganTextField.text
-    viewModel?.airlineAddress = headquartersTextField.text
-    viewModel?.airlineWebsite = websiteTextField.text
+    view.endEditing(true)
+    viewModel?.airlineViewModel = AirlineViewModel()
+    viewModel?.airlineViewModel?.name = nameTextField.text
+    viewModel?.airlineViewModel?.country = countryTextField.text
+    viewModel?.airlineViewModel?.slogan = sloganTextField.text
+    viewModel?.airlineViewModel?.address = headquartersTextField.text
+    viewModel?.airlineViewModel?.website = websiteTextField.text
     viewModel?.didPressSave()
   }
   
   @objc private func cancelButtonPressed(_ sender: UIButton) {
     viewModel?.didPressCancel()
   }
-  
-  
   
 }

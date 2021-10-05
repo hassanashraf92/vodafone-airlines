@@ -12,11 +12,11 @@ import CoreData
 protocol AirlinesTableViewModelProtocol {
   var screenTitle: String { get }
   var state: Bindable<State> { get }
-  var airlineViewModels: Bindable<[Airline]> { get }
+  var airlineViewModels: Bindable<[AirlineViewModel]> { get }
   
   func searchAirline(query: String)
   func fetchAirlinesData()
-  func getAirline(at indexPath: IndexPath) -> Airline?
+  func getAirline(at indexPath: IndexPath) -> AirlineViewModel?
   var selectedIndex: IndexPath? { get set }
   var errorMessage: String? { get }
   
@@ -24,13 +24,12 @@ protocol AirlinesTableViewModelProtocol {
 }
 
 class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
-  
-  
+
   var screenTitle: String
   var state: Bindable<State>
   
-  private var airlines: [Airline] = [Airline]() //For Caching Purpose..
-  var airlineViewModels: Bindable<[Airline]>
+  private var airlines: [AirlineViewModel] = [AirlineViewModel]() //For Caching Purpose..
+  var airlineViewModels: Bindable<[AirlineViewModel]>
   var selectedIndex: IndexPath?
   var errorMessage: String?
   
@@ -40,7 +39,7 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
     self.dataRepo = repo
     screenTitle = "Countries"
     state = Bindable<State>(.empty)
-    airlineViewModels = Bindable<[Airline]>([])
+    airlineViewModels = Bindable<[AirlineViewModel]>([])
   }
   
   func searchAirline(query: String) {
@@ -49,19 +48,17 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
       return
     }
     let filtered = airlines.filter({ airline in
-      return airline.name.range(of: query, options: .caseInsensitive, range: nil, locale: nil) != nil
+      return airline.searchQuery?.range(of: query, options: .caseInsensitive, range: nil, locale: nil) != nil
     })
     airlineViewModels.value = filtered
   }
   
-  func getAirline(at indexPath: IndexPath) -> Airline? {
+  func getAirline(at indexPath: IndexPath) -> AirlineViewModel? {
     return airlineViewModels.value?[indexPath.row]
   }
   
   @objc func fetchAirlinesData() {
-    
     self.switchViewModelStateTo(.loading)
-    
     self.dataRepo.fetchAirlinesData { [weak self] success, airlines, error in
       guard let self = self else { return }
       guard error == nil else {
@@ -86,8 +83,12 @@ class AirlinesTableViewModel: NSObject, AirlinesTableViewModelProtocol {
     self.state.value = state
   }
   
-  private func processAirlinesList(_ airlines: [Airline]) {
-    self.airlines = airlines
-    self.airlineViewModels.value = airlines
+  private func processAirlinesList(_ airlines: [AirlineResponse]) {
+    var vms = [AirlineViewModel]()
+    for airline in airlines {
+      vms.append(AirlineViewModel(airline))
+    }
+    self.airlines = vms
+    self.airlineViewModels.value = vms
   }
 }

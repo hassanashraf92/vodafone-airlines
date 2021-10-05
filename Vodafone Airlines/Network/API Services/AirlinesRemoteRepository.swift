@@ -9,8 +9,8 @@ import Foundation
 
 class AirlinesRemoteRepository {
   
-  func fetchAirlinesData(complete: @escaping (Bool, Airlines, String?) -> ()) {
-    APIManager.shared().request(type: EndPointItem.getAirlinesList) { (airlines: Airlines?, error: String?) in
+  func fetchAirlinesData(complete: @escaping (Bool, [AirlineResponse], String?) -> ()) {
+    APIManager.shared().request(type: EndPointItem.getAirlinesList) { (airlines: [AirlineResponse]?, error: String?) in
       guard error == nil else {
         complete(false, [], error)
         return

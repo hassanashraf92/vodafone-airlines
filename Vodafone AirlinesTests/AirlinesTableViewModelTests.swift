@@ -35,7 +35,7 @@ class AirlinesTableViewModelTests: XCTestCase {
   }
   
   
-  func test_fetch_photo_fail() {
+  func test_fetch_airlines_fail() {
     
     // Given a failed fetch with a certain failure
     let errorMessage = "Something went wrong.."
@@ -50,15 +50,28 @@ class AirlinesTableViewModelTests: XCTestCase {
     
   }
   
+  func test_create_cell_view_model() {
+    // Given
+    let airlinesResponse = StubGenerator().stubAirlines()
+    mockAPIService.airlinesList = airlinesResponse
+    
+    // When
+    sut.fetchAirlinesData()
+    mockAPIService.fetchSuccess()
+    
+    // Number of cell view model is equal to the number of ailines
+    XCTAssertEqual(sut.airlineViewModels.value?.count, airlinesResponse.count)
+  }
+  
 }
 
 class MockAPIService: AirlinesListRepositoryProtocol {
   
-  var airlinesList: [Airline] = [Airline]()
-  var closure: ((Bool, [Airline], String?) -> ())!
+  var airlinesList: [AirlineResponse] = [AirlineResponse]()
+  var closure: ((Bool, [AirlineResponse], String?) -> ())!
   var isFetchAirlinesListCalled = false
   
-  func fetchAirlinesData(complete: @escaping (Bool, [Airline], String?) -> ()) {
+  func fetchAirlinesData(complete: @escaping (Bool, [AirlineResponse], String?) -> ()) {
     isFetchAirlinesListCalled = true
     closure = complete
   }
@@ -68,6 +81,18 @@ class MockAPIService: AirlinesListRepositoryProtocol {
   }
   
   func fetchFails(error: String) {
-    closure(false, [Airline](), error)
+    closure(false, [AirlineResponse](), error)
+  }
+}
+
+
+class StubGenerator {
+  func stubAirlines() -> [AirlineResponse] {
+    let path = Bundle.main.path(forResource: "airlines", ofType: "json")!
+    let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .iso8601
+    let airlines = try! decoder.decode([AirlineResponse].self, from: data)
+    return airlines
   }
 }

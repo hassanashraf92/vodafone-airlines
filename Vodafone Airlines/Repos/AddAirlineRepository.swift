@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AddAirlineRepositoryProtocol {
-  func AddAirline(name: String, slogan: String, country: String, headquarter: String, website: String, complete: @escaping ( _ success: Bool, _ error: String? )->() )
+  func AddAirline(airline: AirlineViewModel, complete: @escaping ( _ success: Bool, _ error: String? )->() )
 }
 
 class AddAirlineRepository {
@@ -21,9 +21,8 @@ class AddAirlineRepository {
 }
 
 extension AddAirlineRepository: AddAirlineRepositoryProtocol {
-  
-  func AddAirline(name: String, slogan: String, country: String, headquarter: String, website: String, complete: @escaping (Bool, String?) -> ()) {
-    apiService.addAirline(name: name, slogan: slogan, country: country, Headquarter: headquarter, website: website) { success, error in
+  func AddAirline(airline: AirlineViewModel, complete: @escaping (Bool, String?) -> ()) {
+    apiService.addAirline(airline: airline) { success, error in
       switch success {
       case true:
         complete(true, nil)

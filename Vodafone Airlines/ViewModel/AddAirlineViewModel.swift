@@ -10,11 +10,7 @@ import Foundation
 protocol AddAirlineViewModelProtocol {
   var screenTitle: String { get }
   var state: Bindable<State> { get }
-  var airlineName: String? { get set }
-  var airlineCountry: String? { get set }
-  var airlineSlogan: String? { get set }
-  var airlineAddress: String? { get set }
-  var airlineWebsite: String? { get set }
+  var airlineViewModel: AirlineViewModel? { get set }
   var errorMessage: Bindable<String> { get }
   func didPressSave()
   func didPressCancel()
@@ -22,17 +18,13 @@ protocol AddAirlineViewModelProtocol {
 }
 
 class AddAirlineViewModel: NSObject, AddAirlineViewModelProtocol {
-
+  
   var screenTitle: String
   var state: Bindable<State>
   var errorMessage: Bindable<String>
   
   //MARK: Airline Details
-  var airlineName: String?
-  var airlineCountry: String?
-  var airlineSlogan: String?
-  var airlineAddress: String?
-  var airlineWebsite: String?
+  var airlineViewModel: AirlineViewModel?
   
   //MARK: Data Repo
   private var dataRepo: AddAirlineRepositoryProtocol
@@ -54,8 +46,11 @@ class AddAirlineViewModel: NSObject, AddAirlineViewModelProtocol {
   }
   
   func addAirline() {
-    
-    self.dataRepo.AddAirline(name: airlineName ?? "", slogan: airlineSlogan ?? "", country: airlineCountry ?? "", headquarter: airlineAddress ?? "", website: airlineWebsite ?? "") { [weak self] success, error in
+    guard let airline = airlineViewModel else {
+      self.errorMessage.value = "Something went wrong.. very wrong."
+      return
+    }
+    self.dataRepo.AddAirline(airline: airline) { [weak self] success, error in
       guard let self = self else { return }
       guard error == nil else {
         self.state.value = .error
@@ -77,27 +72,27 @@ class AddAirlineViewModel: NSObject, AddAirlineViewModelProtocol {
   //MARK: Basic Validation.. (For more complicated validation, we could build one using Factory Design Pattern)
   func validate() -> Bool {
     
-    guard let name = airlineName, !name.isEmpty, name.count > 2 else {
+    guard let name = airlineViewModel?.name, !name.isEmpty, name.count > 2 else {
       self.errorMessage.value = "Please enter a valid name"
       return false
     }
     
-    guard let slogan = airlineSlogan, !slogan.isEmpty, slogan.count > 2 else {
+    guard let slogan = airlineViewModel?.slogan, !slogan.isEmpty, slogan.count > 2 else {
       self.errorMessage.value = "Please enter a valid slogan"
       return false
     }
     
-    guard let country = airlineCountry, !country.isEmpty, country.count > 2 else {
+    guard let country = airlineViewModel?.country, !country.isEmpty, country.count > 2 else {
       self.errorMessage.value = "Please enter a valid country name"
       return false
     }
     
-    guard let address = airlineAddress, !address.isEmpty, address.count > 2 else {
+    guard let address = airlineViewModel?.address, !address.isEmpty, address.count > 2 else {
       self.errorMessage.value = "Please enter a valid address"
       return false
     }
     
-    guard let website = airlineWebsite, !website.isEmpty, website.count > 10 else {
+    guard let website = airlineViewModel?.website, !website.isEmpty, website.count > 10 else {
       self.errorMessage.value = "Please enter a valid website"
       return false
     }

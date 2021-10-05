@@ -13,8 +13,8 @@
 		C7A0CFE3270BB5D300E7EE77 /* AddAirlineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0CFE2270BB5D300E7EE77 /* AddAirlineRepository.swift */; };
 		C7A0CFE5270BB61500E7EE77 /* AddAirlineRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0CFE4270BB61500E7EE77 /* AddAirlineRemoteRepository.swift */; };
 		C7A0CFE9270BC6AA00E7EE77 /* AirlinesTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0CFE8270BC6AA00E7EE77 /* AirlinesTableViewModelTests.swift */; };
-		C7A0CFEB270BCA6700E7EE77 /* airlines_test.json in Resources */ = {isa = PBXBuildFile; fileRef = C7A0CFEA270BCA6700E7EE77 /* airlines_test.json */; };
 		C7A0CFEF270BCD8A00E7EE77 /* AddAirlineViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0CFEE270BCD8A00E7EE77 /* AddAirlineViewModelTests.swift */; };
+		C7A0CFF1270BDB4000E7EE77 /* AirlineDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A0CFF0270BDB4000E7EE77 /* AirlineDetailsViewModelTests.swift */; };
 		C7C75F5B2707E7A5001DF94E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */; };
 		C7C75F642707E7A8001DF94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F632707E7A8001DF94E /* Assets.xcassets */; };
 		C7C75F672707E7A8001DF94E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C75F652707E7A8001DF94E /* LaunchScreen.storyboard */; };
@@ -85,8 +85,8 @@
 		C7A0CFE2270BB5D300E7EE77 /* AddAirlineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAirlineRepository.swift; sourceTree = "<group>"; };
 		C7A0CFE4270BB61500E7EE77 /* AddAirlineRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAirlineRemoteRepository.swift; sourceTree = "<group>"; };
 		C7A0CFE8270BC6AA00E7EE77 /* AirlinesTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesTableViewModelTests.swift; sourceTree = "<group>"; };
-		C7A0CFEA270BCA6700E7EE77 /* airlines_test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = airlines_test.json; sourceTree = "<group>"; };
 		C7A0CFEE270BCD8A00E7EE77 /* AddAirlineViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAirlineViewModelTests.swift; sourceTree = "<group>"; };
+		C7A0CFF0270BDB4000E7EE77 /* AirlineDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		C7C75F572707E7A5001DF94E /* Vodafone Airlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vodafone Airlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C75F5A2707E7A5001DF94E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C75F632707E7A8001DF94E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,9 +249,9 @@
 			children = (
 				C7C75F712707E7A8001DF94E /* Vodafone_AirlinesTests.swift */,
 				C7A0CFE8270BC6AA00E7EE77 /* AirlinesTableViewModelTests.swift */,
+				C7A0CFF0270BDB4000E7EE77 /* AirlineDetailsViewModelTests.swift */,
 				C7A0CFEE270BCD8A00E7EE77 /* AddAirlineViewModelTests.swift */,
 				C7C75F732707E7A8001DF94E /* Info.plist */,
-				C7A0CFEA270BCA6700E7EE77 /* airlines_test.json */,
 			);
 			path = "Vodafone AirlinesTests";
 			sourceTree = "<group>";
@@ -531,7 +531,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7A0CFEB270BCA6700E7EE77 /* airlines_test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +691,7 @@
 			files = (
 				C7A0CFE9270BC6AA00E7EE77 /* AirlinesTableViewModelTests.swift in Sources */,
 				C7A0CFEF270BCD8A00E7EE77 /* AddAirlineViewModelTests.swift in Sources */,
+				C7A0CFF1270BDB4000E7EE77 /* AirlineDetailsViewModelTests.swift in Sources */,
 				C7C75F722707E7A8001DF94E /* Vodafone_AirlinesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
